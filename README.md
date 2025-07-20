@@ -65,20 +65,23 @@ Create a .env file with:
 env
 MONGO_URL=mongodb+srv://<username>:<password>@<cluster-url>/<dbname>
 ```
-Or hardcode the MongoDB URI inside database.py.
+
 ##4️⃣ Run the Server
 ```
 bash
 uvicorn main:app --reload
 ```
 Server runs at: http://localhost:8000
+
 ---
-
-
-📦 API Endpoints
+##📦 API Endpoints
 📘 Products
 ➕ Create Product
+bash
+Copy
+Edit
 POST /products
+Request Body:
 
 json
 Copy
@@ -88,8 +91,10 @@ Edit
   "price": 499.99
 }
 📄 Get Products (Paginated)
+pgsql
+Copy
+Edit
 GET /products?limit=10&offset=0
-
 Response:
 
 json
@@ -107,7 +112,11 @@ Edit
 }
 📦 Orders
 ➕ Create Order
+bash
+Copy
+Edit
 POST /orders
+Request Body:
 
 json
 Copy
@@ -120,8 +129,10 @@ Edit
   ]
 }
 📄 Get Orders for User
+pgsql
+Copy
+Edit
 GET /orders/{user_id}?limit=10&offset=0
-
 Response:
 
 json
@@ -146,15 +157,20 @@ Edit
     "previous": "-10"
   }
 }
-🧪 Test the API
-You can use:
+🧪 Testing
+You can test the API using:
 
 Postman
 
 Hoppscotch
 
-curl or httpie in your terminal
+curl or httpie in terminal
 
 ☁️ Deployment
-The API is live on Render:
+The API is deployed and live at:
+
 🌐 https://ecommerce-api-0woo.onrender.com
+
+You can view API documentation at:
+
+📄 https://ecommerce-api-0woo.onrender.com/docs

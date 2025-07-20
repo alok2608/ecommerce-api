@@ -48,7 +48,7 @@ ecommerce-api/
 git clone https://github.com/your-username/ecommerce-api.git
 cd ecommerce-api
 
-
+```
 ## 2️⃣ Create virtual environment & install dependencies
 ```
 python -m venv venv
@@ -63,7 +63,7 @@ You can either:
 
 Create a .env file with:
 ```
-env
+.env
 MONGO_URL=mongodb+srv://<username>:<password>@<cluster-url>/<dbname>
 ```
 

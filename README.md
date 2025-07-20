@@ -47,7 +47,8 @@ ecommerce-api/
 ```bash
 git clone https://github.com/your-username/ecommerce-api.git
 cd ecommerce-api
-```
+
+
 ## 2️⃣ Create virtual environment & install dependencies
 ```
 python -m venv venv

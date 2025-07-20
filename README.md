@@ -57,7 +57,7 @@ venv\Scripts\activate         # For Windows
 
 pip install -r requirements.txt
 ```
-##3️⃣ Add MongoDB URI
+## 3️⃣ Add MongoDB URI
 You can either:
 
 Create a .env file with:
@@ -66,7 +66,7 @@ env
 MONGO_URL=mongodb+srv://<username>:<password>@<cluster-url>/<dbname>
 ```
 
-##4️⃣ Run the Server
+## 4️⃣ Run the Server
 ```
 bash
 uvicorn main:app --reload
@@ -74,32 +74,31 @@ uvicorn main:app --reload
 Server runs at: http://localhost:8000
 
 ---
-##📦 API Endpoints
+## 📦 API Endpoints
 📘 Products
 ➕ Create Product
+```
 bash
-Copy
-Edit
 POST /products
+```
 Request Body:
-
+```
 json
-Copy
-Edit
+
 {
   "name": "T-Shirt",
   "price": 499.99
 }
+```
 📄 Get Products (Paginated)
+```
 pgsql
-Copy
-Edit
 GET /products?limit=10&offset=0
+```
 Response:
-
+```
 json
-Copy
-Edit
+
 {
   "data": [
     { "id": "...", "name": "T-Shirt", "price": 499.99 }
@@ -110,17 +109,16 @@ Edit
     "previous": "-10"
   }
 }
+```
 📦 Orders
 ➕ Create Order
+```
 bash
-Copy
-Edit
 POST /orders
+```
 Request Body:
-
+```
 json
-Copy
-Edit
 {
   "userId": "user123",
   "items": [
@@ -128,16 +126,15 @@ Edit
     { "productId": "def456", "qty": 1 }
   ]
 }
+```
 📄 Get Orders for User
+```
 pgsql
-Copy
-Edit
 GET /orders/{user_id}?limit=10&offset=0
+```
 Response:
-
+```
 json
-Copy
-Edit
 {
   "data": [
     {
@@ -157,14 +154,8 @@ Edit
     "previous": "-10"
   }
 }
-🧪 Testing
-You can test the API using:
+```
 
-Postman
-
-Hoppscotch
-
-curl or httpie in terminal
 
 ☁️ Deployment
 The API is deployed and live at:
